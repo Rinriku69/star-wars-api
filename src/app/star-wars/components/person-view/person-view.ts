@@ -8,7 +8,7 @@ import {
   resource,
 } from '@angular/core';
 import { Film, Person, Planet } from '../../types';
-import { AsyncPipe, DatePipe } from '@angular/common';
+import { DatePipe } from '@angular/common';
 import { fetchResource } from '../../helpers';
 import { httpResource } from '@angular/common/http';
 import { applyEach, createManagedMetadataKey, form, metadata } from '@angular/forms/signals';
@@ -17,7 +17,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-person-view',
-  imports: [AsyncPipe, DatePipe, ExtractIdPipe, RouterLink],
+  imports: [DatePipe, ExtractIdPipe, RouterLink],
   templateUrl: './person-view.html',
   styleUrl: './person-view.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
